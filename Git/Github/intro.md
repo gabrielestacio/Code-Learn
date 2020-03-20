@@ -81,3 +81,6 @@
 17º passo: Ligando repositório local ao remoto:
     git remote add origin git@github.com:gabrielestacio/<repname>.git
     git push -u origin master
+
+18º passo: Enviando mudanças para o repositório remoto:
+    git push origin (meu repositório remoto) master (branch que eu tô)
