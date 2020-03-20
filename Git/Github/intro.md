@@ -177,4 +177,5 @@
     git revert <hash>
 
 28º passo (opcional): Apagar tags e branchs:
-    git push origin :<tag ou branch>
+    
+    git push origin : <tag ou branch>
