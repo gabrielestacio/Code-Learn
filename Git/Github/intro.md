@@ -107,3 +107,74 @@
 18º passo: Enviando mudanças para o repositório remoto:
    
     git push origin (meu repositório remoto) master (branch que estou)
+
+19º passo: Puxando alterações do remoto pro local:
+
+    git pull origin master
+
+20º passo (opcional): Clonar repositório remoto:
+
+    git clone <ssh> <newrepname>
+
+21º passo (opcional): Criar uma ramificação do projeto (branch)
+
+    git checkout -b <branchname>
+
+    git branch
+        Mostra os branchs existentes e em qual você está no momento
+
+    git checkout <branchname>
+        Alterna entre branchs
+
+    git branch -D <branchname>
+        Deleta um branch
+
+22º passo (opcional): União dos branchs
+
+    MERGE:
+        Cria um novo commit juntando os commits separados de todos os branchs. Mais usado em pull requests.
+
+        git merge <branch que você quer juntar>
+
+    REBASE:
+        Move os commits da branch secundária e jogar na frente do último commit da master (ou da branch pra qual você quer mover).
+
+        git pull --rebase
+            Evita problemas de histórico quando for dar pull no repositório
+
+        git rebase <branch que você quer juntar> 
+
+23º passo (opcional): Ignorar arquivos na hora do push (gitignore)
+
+    Criar um arquivo .gitignore
+    Nele eu vou descrever quem eu não quero que suba. Pra que ele ignore todos os arquivos de um tipo específico, botar "*.<extensão>"
+
+24º passo (opcional): Salvar modificações para terminar depois, pra não levar  pra outro branch quando eu mudar
+
+    git stash
+
+    Quando for retomar:
+        git stash apply
+
+    Listar:
+        git stash list
+
+    Deletar os stashs:
+        git stash list
+
+25º passo (opcional): Criar atalhos no terminal
+
+    git config --global alias.<atalho> <o que o atalho faria>
+
+26º passo (opcional): Criar tags para marcar as versões:
+
+    git tag -a <versão> -m "<mensagem>"
+
+    git push origin master --tags
+
+27º passo (opcional): Reverter um commit específico sem desfazer o commit que "deu errado". Você pode analisar o que deu errado depois, por exemplo.
+
+    git revert <hash>
+
+28º passo (opcional): Apagar tags e branchs:
+    git push origin :<tag ou branch>
